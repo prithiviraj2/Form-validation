@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form validation</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body onload="buildFunction()">
+    <div class="design mobile">
+        <div class="container text-light">
+            <form class="row mx-lg-3 mt-2" id="myform">
+                <h1 class="my-4">FORM VALIDATIONS</h1>
+                <div class="mb-3">
+                    <label for="exampleInputName1" class="form-label"><b> Name</b></label>
+                    <input type="text" class="form-control" placeholder="Enter Your Name" id="entername" required>
+                    <p id="alert" class="err"></p>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label"> <b>Mobile Number</b></label>
+                    <input type="number" class="form-control" placeholder="Enter your Mobile Number" id="enternumber"
+                        required>
+                    <p id="alertnum" class="err"></p>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label"> <b> Email </b></label>
+                    <input type="email" class="form-control" placeholder="Enter your Email " id="enteremail" required>
+                    <p id="alertmail" class="err"></p>
+                </div>
+
+                <div class="col-12 mb-3">
+                    <label for="validationServer03" class="form-label"> <b>Gender</b></label>
+                    <div class="form-check">
+                        <input type="radio" name="radioget" value="male"> Male
+                    </div>
+                    <div class="form-check">
+                        <input type="radio" name="radioget" value="female"> Female
+                    </div>
+                    <div class="form-check">
+                        <input type="radio" name="radioget" value="others"> Others
+                    </div>
+                </div>
+                <p id="alertgender" class="err"></p>
+
+                <div class="col-12 mb-3" id="tbl">
+                    <label for="language"><b> Language</b></label>
+
+                    <div class="form-check">
+                        <input type="checkbox" value="Tamil" id="getlang"> Tamil
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" value="English" id="getlang"> English
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" value="Hindi" id="getlang"> Hindi
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" value="Others" id="getlang"> Others
+                    </div>
+                    <p id="alertlang" class="err"></p>
+                </div>
+                <div class="col-12 mb-3">
+                    <label for="status"><b>Status</b></label><br>
+                    <select class=" dropdown-toggle" id="getstatus" name="getstatus">
+                        <option class="dropdown-item" value="">select status</option>
+                        <option class="dropdown-item" value="active">active</option>
+                        <option class="dropdown-item" value="inactive">Inactive</option>
+                    </select>
+                    <p id="alertstatus" class="err"></p>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label"><b>Address</b></label>
+                    <textarea class="form-control" rows="3" id="getaddress"></textarea>
+                    <p id="alertaddress" class="err"></p>
+                </div>
+                <div class="col-12 mb-5">
+                    <button class="btn btn-primary" type="button" onclick="validateform()">Submit</button>
+                    <button class="btn btn-warning" type="button" onclick="resetfunction()">Reset</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+    <div class="container table-responsive-sm">
+        <table class="table table-warning table-striped  mx-3">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Mobile Number</th>
+                    <th>Email</th>
+                    <th>Gender</th>
+                    <th>Language</th>
+                    <th>Status</th>
+                    <th>Address</th>
+                </tr>
+            </thead>
+            <tbody id="tabledata"></tbody>
+        </table>
+    </div>
+
+
+    <script src="index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@media only screen and (min-width: 768px) {
+    .design {
+        border: 1px solid black;
+        border-radius: 10px;
+        width: 50%;
+        margin: 50px auto 50px auto;
+        box-shadow: 0 0 10px 10px rgb(136, 136, 136);
+        background-image: url(images.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .mobile {
+        border: 1px solid black;
+        border-radius: 10px;
+        margin: 50px 10px 50px 10px;
+       background-color: aquamarine;
+    }   
+}
+
+.err {
+    color: red;
+}
+
+body {
+    
+    background-image: url(cosmetic-background-for-product-branding-and-packaging-presentation-geometry-form-circle-molding-on-podium-stage-with-shadow-of-leaf-background-design-eps10-vector.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+}
+h1{
+    font-weight: bold;
+   text-align: center;
+   margin: 0 auto 0 auto;
+   color: rgb(241, 241, 241);
+   text-shadow: 4px 4px 4px #000000;
+}
